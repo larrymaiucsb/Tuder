@@ -6,15 +6,27 @@ admin.initializeApp({
    // databaseURL: ""https://tuder-c1857.firebaseio.com""
   });
 var db = admin.firestore();
-let userName = '';
-let first = '';
-let last = '';
-let yearBirth = 0;
-var docRef = db.collection('users').doc(userName);//stores a new folder
-var array = [];
-var setAda = docRef.set({
-    first: first,
-    last: last,
-    subject: array,
-    born: yearBirth
-})
+function store(collect, userName, fullName, yearBirth, array){
+    var docRef = db.collection(collect).doc(userName);//stores a new folder
+    var setAda = docRef.set({
+        fullName: fullName,
+        subject: array,
+        born: yearBirth
+    })
+}
+function match(collect, userName){
+    db.collection(collect).doc(userName).get()
+    .then(doc=>{
+        if(!doc.exists){
+            console.log('no such user');
+        }
+        else{
+            console.log(doc.data());
+        }
+    })
+    .catch(error=>{
+        console.error('error getting doc', err);
+        process.exit();
+    })
+}
+match('tutor','antm');
