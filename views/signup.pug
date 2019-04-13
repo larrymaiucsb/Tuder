@@ -1,0 +1,64 @@
+doctype html
+html
+    head
+        title Tuder Signup
+        link(href='https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', rel='stylesheet', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous', type='text/css')
+    body
+    .container
+        .input-group
+            span#basic-addon1.input-group-addon Please Enter Your Full Name
+            input.form-control(type='text')
+        .input-group
+            span#basic-addon1.input-group-addon Are you a tutor or tutee?
+            div
+                input(type='radio', name='tut', value='Tutor')
+                |   Tutor
+            div
+                input(type='radio', name='tut', value='Tutee')
+                |   Tutee
+        .input-group
+            form(method='post', action='/Tests/Post/')
+                fieldset
+                    legend What is Your best subject?
+                    input(type='checkbox', name='favorite_pet', value='Math')
+                    | Math
+                    br
+                    input(type='checkbox', name='favorite_pet', value='Physics')
+                    | Physics
+                    br
+                    input(type='checkbox', name='favorite_pet', value='English')
+                    | English
+                    br
+                    input(type='checkbox', name='favorite_pet', value='Chemistry')
+                    | Chemistry
+                    br
+                    input(type='checkbox', name='favorite_pet', value='History')
+                    | History
+                    br
+                    input(type='checkbox', name='favorite_pet', value='Psychology')
+                    | Psychology
+                    br
+                    input(type='checkbox', name='favorite_pet', value='Music Theory')
+                    | Music Theory
+                    br
+                    input(type='checkbox', name='favorite_pet', value='Chinese')
+                    | Chinese
+                    br
+                    input(type='checkbox', name='favorite_pet', value='Spanish')
+                    | Spanish
+                    br
+                    input(type='checkbox', name='favorite_pet', value='Computer Science')
+                    | Computer Science
+                    br
+                    input(type='checkbox', name='favorite_pet', value='Sport Nutrition')
+                    | Sport Nutrition
+                    br
+                    input(type='checkbox', name='favorite_pet', value='Art')
+                    | Art
+                    br
+                    br
+                    input(type='submit', value='Submit now')
+        .input-group
+            span#basic-addon1.input-group-addon Please enter the college you're enrolled in
+                input.form-control(type='text')
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', crossorigin='anonymous')
