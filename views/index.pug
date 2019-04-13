@@ -1,4 +1,4 @@
-
+doctype html
 html
   head
     title Tuder
@@ -7,7 +7,7 @@ html
     link(rel='stylesheet', type='text/css', href='/stylesheets/home.css')
     link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.8.1/css/all.css', integrity='sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf', crossorigin='anonymous')
   body
-    nav.navbar.navbar-default
+    nav.navbar.navbar-inverse
       .container
         // Brand and toggle get grouped for better mobile display
         .navbar-header
@@ -16,8 +16,6 @@ html
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.navbar-brand(href='#')
-            img(src='/images/logo.png')
         // Collect the nav links, forms, and other content for toggling
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           ul.nav.navbar-nav.navbar-right
@@ -35,9 +33,10 @@ html
       .row
         .col-lg-12
           #content
-            h1 Tuder
-            h3 Enjoy studying together. Live the moment together. Gain Knowledge together
-            hr
-            button.btn.btn-default.btn-lg Get Started!
+            div.text-center
+              a(href='#')
+                img(src='/images/logo.png')
+              h3 Enjoy studying together. Live the moment together. Gain Knowledge together
+              button.btn.btn-default.btn-lg Get Started!
     script(src='https://code.jquery.com/jquery-3.4.0.js')
     script(src='https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', crossorigin='anonymous')
