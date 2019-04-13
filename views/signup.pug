@@ -1,64 +1,51 @@
 doctype html
 html
-    head
-        title Tuder Signup
-        link(href='https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', rel='stylesheet', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous', type='text/css')
-    body
-    .container
+  head
+    script.
+      function grabData() {
+      var fullName = document.getElementById("fullName").value;
+      console.log(fullName);
+      var email = document.getElementById("email").value;
+      console.log(email);
+      var password = document.getElementById("password").value;
+      console.log(password);
+      var tut = document.querySelector('input[type = radio]:checked').value;
+      console.log(tut);
+      var subject = document.getElementById("subject").value;
+      console.log(subject);
+      var college = document.getElementById("college").value;
+      console.log(college);
+      }
+    title Tuder Signup
+    link(href='signup.css', rel='stylesheet', type='text/css')
+    link(href='https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', rel='stylesheet', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous', type='text/css')
+  body
+    form
+      .container
         .input-group
-            span#basic-addon1.input-group-addon Please Enter Your Full Name
-            input.form-control(type='text')
+          span.input-group-addon Please Enter Your Full Name
+          input#fullName.form-control(type='text')
         .input-group
-            span#basic-addon1.input-group-addon Are you a tutor or tutee?
-            div
-                input(type='radio', name='tut', value='Tutor')
-                |   Tutor
-            div
-                input(type='radio', name='tut', value='Tutee')
-                |   Tutee
+          span.input-group-addon Please Enter Email
+          input#email.form-control(type='email')
         .input-group
-            form(method='post', action='/Tests/Post/')
-                fieldset
-                    legend What is Your best subject?
-                    input(type='checkbox', name='favorite_pet', value='Math')
-                    | Math
-                    br
-                    input(type='checkbox', name='favorite_pet', value='Physics')
-                    | Physics
-                    br
-                    input(type='checkbox', name='favorite_pet', value='English')
-                    | English
-                    br
-                    input(type='checkbox', name='favorite_pet', value='Chemistry')
-                    | Chemistry
-                    br
-                    input(type='checkbox', name='favorite_pet', value='History')
-                    | History
-                    br
-                    input(type='checkbox', name='favorite_pet', value='Psychology')
-                    | Psychology
-                    br
-                    input(type='checkbox', name='favorite_pet', value='Music Theory')
-                    | Music Theory
-                    br
-                    input(type='checkbox', name='favorite_pet', value='Chinese')
-                    | Chinese
-                    br
-                    input(type='checkbox', name='favorite_pet', value='Spanish')
-                    | Spanish
-                    br
-                    input(type='checkbox', name='favorite_pet', value='Computer Science')
-                    | Computer Science
-                    br
-                    input(type='checkbox', name='favorite_pet', value='Sport Nutrition')
-                    | Sport Nutrition
-                    br
-                    input(type='checkbox', name='favorite_pet', value='Art')
-                    | Art
-                    br
-                    br
-                    input(type='submit', value='Submit now')
+          span.input-group-addon Please Enter Password
+          input#password.form-control(type='password')
         .input-group
-            span#basic-addon1.input-group-addon Please enter the college you're enrolled in
-                input.form-control(type='text')
+          span.input-group-addon Are you a tutor or tutee?
+          div
+            input(type='radio', name='tut', value='Tutor', selected='')
+            | Tutor
+          div
+            input(type='radio', name='tut', value='Tutee')
+            | Tutee
+        .input-group
+          span.input-group-addon Favorite Subject(s)?
+          input#subject.form-control(type='text')
+        .input-group
+          span.input-group-addon Please enter the college you're enrolled in
+          input#college.form-control(type='text')
+      input(type='submit', value='Submit', onclick='grabData()')
+    script(src='https://code.jquery.com/jquery-3.4.0.min.js', integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=', crossorigin='anonymous')
+    script(src='grabData.js', type='text/javascript')
     script(src='https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', crossorigin='anonymous')
