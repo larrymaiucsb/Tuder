@@ -2,7 +2,13 @@ form {
 	width: 50%;
 	margin: 25rem auto;
 }
+body {
+	background: linear-gradient(pink, white);
+  }
 
 .submit {
 	margin: 0 auto;
+}
+.btn-default {
+	border: 2px solid #de0099;
 }

@@ -5,6 +5,7 @@ body {
 	background-position: center;
 	font-family: Lato;
 	color: white;
+	background: linear-gradient(pink, white);
 }
 
 html {
