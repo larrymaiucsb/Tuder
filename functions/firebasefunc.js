@@ -6,10 +6,15 @@ admin.initializeApp({
    // databaseURL: ""https://tuder-c1857.firebaseio.com""
   });
 var db = admin.firestore();
-var docRef = db.collection('users').doc('alovelace');//stores a new folder
-
+let userName = '';
+let first = '';
+let last = '';
+let yearBirth = 0;
+var docRef = db.collection('users').doc(userName);//stores a new folder
+var array = [];
 var setAda = docRef.set({
-    first: 'Ada',
-    last: 'Lovelave',
-    born: 1815
+    first: first,
+    last: last,
+    subject: array,
+    born: yearBirth
 })
